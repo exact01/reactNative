@@ -6,7 +6,6 @@ import { Button } from '../../components/UI/button'
 export const Main = () => {
     const windowHeight = Dimensions.get('window').height
     const windowWidth = Dimensions.get('window').width
-
     return (
         <View style={styles.container}>
             <View style={styles.content}>
@@ -25,8 +24,10 @@ export const Main = () => {
                     />
                 </ImageBackground>
                 <View style={styles.wrapper}>
-                    <Text style={styles.title}>Одно из самых вкусных кофе в городе!</Text>
-                    <Text style={styles.subtitle}>Свежие зёрна, настоящая арабика и бережная обжарка</Text>
+                    <View style={styles.wrapperTitle}>
+                        <Text style={styles.title}>Одно из самых вкусных кофе в городе!</Text>
+                        <Text style={styles.subtitle}>Свежие зёрна, настоящая арабика и бережная обжарка</Text>
+                    </View>
                     <Button text={'Начать'}/>
                 </View>
             </View>

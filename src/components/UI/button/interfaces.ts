@@ -1,5 +1,5 @@
 import { PressableProps } from 'react-native'
 
-export interface IMyButton extends PressableProps {
+export interface IButton extends PressableProps {
   text: string
 }

@@ -19,7 +19,10 @@ export const styles = StyleSheet.create({
         transform: [{ translateY: -30 }],
         width: '100%',
         flex: 1,
-        justifyContent: 'space-around',
+        justifyContent: 'space-between',
+    },
+    wrapperTitle: {
+        flexDirection: 'column',
     },
     title: {
         fontSize: 34,
