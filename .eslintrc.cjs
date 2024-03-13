@@ -14,8 +14,14 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['@typescript-eslint'],
+    plugins: ['@typescript-eslint', "react", "react-native"],
     rules: {
+        "react-native/no-unused-styles": 2,
+        "react-native/split-platform-components": 2,
+        "react-native/no-inline-styles": 2,
+        "react-native/no-color-literals": 2,
+        "react-native/no-raw-text": 2,
+        "react-native/no-single-element-style-arrays": 2,
         '@typescript-eslint/no-unused-vars': [
             'warn',
             {
@@ -48,7 +54,7 @@ module.exports = {
         'comma-dangle': ['error', {
             arrays: 'always-multiline',
             objects: 'always-multiline',
-            imports: 'never',
+            imports: 'always-multiline',
             exports: 'never',
             functions: 'never',
         }],
