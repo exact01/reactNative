@@ -1,6 +1,6 @@
 import { Image, View, Text, SafeAreaView } from 'react-native'
 import { styles } from '../lib'
-import { CustomLink } from 'src/features/customLink'
+import { CustomLink } from 'src/shared/ui'
 import { ROUTES } from '@shared/lib/constants'
 export default function Unmatched() {
     return (

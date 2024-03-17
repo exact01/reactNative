@@ -5,7 +5,7 @@ const Catalog = () => {
     return (
         <View style={styles.container}>
             <View style={styles.content}>
-                <Text style={styles.text}>Каталог</Text>
+                <Text style={styles.text}>Каталог ссылок</Text>
                 <CatalogAddress />
             </View>
         </View>

@@ -3,11 +3,11 @@ import { styles } from '../lib/'
 import { CustomLinkEditAddress } from '@shared/ui'
 import { ROUTES } from '@shared/lib/constants'
 import React from 'react'
-const Address = () => {
+const Success = () => {
     return (
         <View style={styles.container}>
             <View style={styles.content}>
-                <Text style={styles.text}>Изменить адрес</Text>
+                <Text style={styles.text}>Заказ оформлен</Text>
                 <CustomLinkEditAddress
                     href={ROUTES.CATALOG}
                     address='Обратно'
@@ -17,4 +17,4 @@ const Address = () => {
     )
 }
 
-export default Address
+export default Success

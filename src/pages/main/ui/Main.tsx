@@ -2,7 +2,7 @@ import { Animated, Dimensions, ImageBackground, Text, View } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { animatedOpacity, animatedXY, styles } from '../lib'
 
-import { CustomLink } from 'src/features/customLink'
+import { CustomLink } from 'src/shared/ui'
 import { ROUTES } from '@shared/lib/constants'
 
 export const Main = () => {

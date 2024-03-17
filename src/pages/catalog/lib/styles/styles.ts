@@ -7,7 +7,6 @@ export const styles = StyleSheet.create({
         flex: 1,
     },
     content: {
-        alignItems: 'center',
         margin: 0,
         padding: 0,
         flex: 1,
@@ -16,5 +15,6 @@ export const styles = StyleSheet.create({
         color: COLORS.white,
         fontSize: FONT_SIZE.f18,
         fontFamily: FONTS.soraExtraBold,
+        textAlign: 'center',
     },
 })

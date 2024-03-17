@@ -4,7 +4,7 @@ import { ViewAddress } from '@features/viewAddress'
 export const CatalogAddress = () => {
     return (
         <>
-            <ViewAddress address={'dsadas'} />
+            <ViewAddress address={'Адресс'} />
         </>
     )
 }
