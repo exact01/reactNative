@@ -1,16 +1,11 @@
-import { Stack, SplashScreen } from 'expo-router'
+import { SplashScreen, Tabs } from 'expo-router'
 import { StatusBar } from 'expo-status-bar'
-import {
-    SafeAreaProvider,
-    useSafeAreaInsets,
-} from 'react-native-safe-area-context'
-import { COLORS } from '@shared/lib/constants'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { useFonts } from 'expo-font'
 import { useCallback } from 'react'
 
 SplashScreen.preventAutoHideAsync()
 export default function RootLayout() {
-    const insets = useSafeAreaInsets()
     const [fontsLoaded, fontError] = useFonts({
         SoraBold: require('@shared/lib/fonts/Sora-Bold.ttf'),
         SoraExtraBold: require('@shared/lib/fonts/Sora-ExtraBold.ttf'),
@@ -35,17 +30,10 @@ export default function RootLayout() {
     return (
         <SafeAreaProvider onLayout={onLayoutRootSafeAreaProvider}>
             <StatusBar style='light' />
-            <Stack
+            <Tabs
                 screenOptions={{
-                    statusBarColor: COLORS.black,
-                    contentStyle: {
-                        backgroundColor: COLORS.black,
-                        paddingTop: insets.top,
-                    },
                     headerShown: false,
-                }}>
-                <Stack.Screen name='(tabs)' />
-            </Stack>
+                }}></Tabs>
         </SafeAreaProvider>
     )
 }

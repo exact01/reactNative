@@ -3,7 +3,7 @@ import { IButton } from '@shared/ui'
 import { GestureResponderEvent, Pressable, Text } from 'react-native'
 import { styles } from './styles.button'
 import { Animated } from 'react-native'
-import { color, fadeIn, fadeOut } from './animation'
+import { animationColor, fadeIn, fadeOut } from './animation'
 
 export const Button = ({ text, ...props }: IButton) => {
     const onPressIn = (e: GestureResponderEvent) => {
@@ -18,7 +18,8 @@ export const Button = ({ text, ...props }: IButton) => {
 
     return (
         <Pressable onPressIn={onPressIn} onPressOut={onPressOut} {...props}>
-            <Animated.View style={{ ...styles.button, backgroundColor: color }}>
+            <Animated.View
+                style={{ ...styles.button, backgroundColor: animationColor }}>
                 <Text style={styles.text}>{text}</Text>
             </Animated.View>
         </Pressable>

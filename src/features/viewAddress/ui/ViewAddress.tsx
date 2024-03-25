@@ -1,31 +1,17 @@
 import { IViewAddress } from './viewAddress.interfaces'
-import { View, Text } from 'react-native'
-import { CustomLinkEditAddress } from '@shared/ui'
-import { ROUTES } from '@shared/lib/constants'
+import { View, Text, Image } from 'react-native'
+import { stylesAddress } from '@features/viewAddress/lib'
 
 export function ViewAddress({ address }: IViewAddress) {
     return (
-        <View>
-            <Text>Адрес</Text>
-            <View>
-                <CustomLinkEditAddress
-                    href={'/dsadasd'}
-                    address='Перейти на unmatched'
+        <View style={stylesAddress.wrapper}>
+            <Text style={stylesAddress.label}>Адресс</Text>
+            <View style={stylesAddress.wrapperAddress}>
+                <Text style={stylesAddress.text}>{address}</Text>
+                <Image
+                    style={stylesAddress.icon}
+                    source={require('@assets/images/Icon_edit.png')}
                 />
-                <CustomLinkEditAddress
-                    href={ROUTES.CATALOG}
-                    address={'Каталог'}
-                />
-                <CustomLinkEditAddress
-                    href={ROUTES.CATALOG_FROM_ID('id')}
-                    address={'Каталог id'}
-                />
-                <CustomLinkEditAddress
-                    href={ROUTES.ADDRESS}
-                    address={'Адрес'}
-                />
-                <CustomLinkEditAddress href={ROUTES.CART} address={'Успех'} />
-                <CustomLinkEditAddress href={ROUTES.CART} address={'Корзина'} />
             </View>
         </View>
     )
